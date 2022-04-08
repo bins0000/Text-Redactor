@@ -100,7 +100,7 @@ However, SpaCy alone cannot catch every name in the documents, and therefore som
     
 ## Concepts Redactor
 `conceptRedactor(data)` takes data of string in and redact any senctence that contains the exact words or other words related to the exact words passed in by --concept arguments. Since user can basically passed in any words they can think of, the function will normallize the input word by lemmatization to narrow down the word search. NLTK package is used in this function to lemmatize the words and also fine the synnonym of the input concepts to increase the amount of vocab related to the input concept. 
-The collection of concepts are store in a dictionary format where the concept key have multiple related words in a list as its values. If a sentence in the document contain any word in the list, the whole sentence will be redacted with the blocks. 
+The collection of concepts are store in a 2D list format where the related words in a list are group together by concept. If a sentence in the document contain any word in the list, the whole sentence will be redacted with the blocks. 
 
 ## Addresses Redactor
 `addressRedactor(data)` just like others, take in data string and redact the street address that appears in the text. This function uses multiple regular expression to try to catch as many formats of addresses including the street addresses, P.O. boxes, City, State, and Zip code. 
