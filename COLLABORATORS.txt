@@ -1,0 +1,22 @@
+Pymotw, http://pymotw.com/2/glob/?fbclid=IwAR1V7nAkiRFcXAI3H9PixvnU-tucxm_-4Dr4FjVjrjy7K0ks1SJ5T6B1EKc , GLOB
+StackOverFlow, https://stackoverflow.com/questions/21948019/python-untokenize-a-sentence , detokenizer
+StackOverFlow, https://stackoverflow.com/questions/62785916/spacy-replace-token , ideas on how to replace NLP tokens
+TechIEDelight, https://www.techiedelight.com/convert-tuple-to-string-python/ , on how to join tuples into a string (used when combining the headers)
+Python.org, https://docs.python.org/3/library/email.compat32-message.html#email.message.Message , email.message.Message library - Message class
+PythonForEngineers, https://new.pythonforengineers.com/blog/analysing-the-enron-email-corpus/ , ideas on how to parse email 
+Onintsoa R., ony@ou.edu, helps me understand how to structure the directories, and how to work around redactor.py and main.py
+AppDivident, https://appdividend.com/2022/01/27/python-regex-replace/#:~:text=To%20replace%20a%20string%20in,can%20also%20use%20the%20str. , subsitute using regex
+SoftHints, https://softhints.com/python-regex-match-date/ , regex for dates
+madisonmay, https://github.com/madisonmay/CommonRegex , for regex - address regex - phone regex
+StackOverFlow, https://stackoverflow.com/questions/62785916/spacy-replace-token , tokens whitespaces 
+Biruk Worku, biruk.kassahun.worku-1@ou.edu, hlp me understand a lot of data structures, and python syntaxes. And how to work around virtual machine.  
+StackOverFlow, https://stackoverflow.com/questions/9012008/pythons-re-return-true-if-string-contains-regex-pattern , for regex boolean
+philipperemy, https://github.com/philipperemy/name-dataset , name-dataset
+StackOverFlow, https://stackoverflow.com/questions/6930982/how-to-use-a-variable-inside-a-regular-expression , How to use a variable inside a regular expression
+GeeksForGeeks, https://www.geeksforgeeks.org/python-lemmatization-with-nltk/ , lemmatizer
+Yangzom Dolma, yangzom.dolma-1@ou.edu, help me unerstand regular expression. 
+StackOverFlow, https://stackoverflow.com/questions/3868753/find-phone-numbers-in-python-script , another phone regex
+StackOverFlow, https://stackoverflow.com/questions/42334197/add-only-unique-values-to-a-list-in-python , how to merge list without duplicates
+StackOverFlow, https://stackoverflow.com/questions/27092833/unicodeencodeerror-charmap-codec-cant-encode-characters , to add encoding="utf-8" when writing a file
+StackOverFlow, https://stackoverflow.com/questions/7336096/python-glob-without-the-whole-path-only-the-filename , getting file name from glob
+Note.NLTK, https://note.nkmk.me/en/python-dict-setdefault/ , how to add keys to dict if not exist
