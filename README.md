@@ -200,3 +200,8 @@ This function test if name redactor function can redact different names in a str
 
 ### test_phones.py
 Several phone numbers with unique patterns are given to test if phone redactor function can catch the phone numbers in these various patterns. 
+
+# Outputs
+The outputs are written into a specified folder on the same level as project1/
+The output file will have the same name as the input with .redacted appended as an extention.
+`"./"+output_path + fileName + ".redacted"`
