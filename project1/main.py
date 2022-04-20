@@ -12,7 +12,7 @@ from nltk.corpus import wordnet # for synonyms set
 import sys    # for writing stderr
 
 # spacy - load nlp
-nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("en_core_web_md")
 
 # Stats
 # have some objects to keep track of redaction, a list in this case
