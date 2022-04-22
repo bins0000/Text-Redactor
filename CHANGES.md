@@ -7,3 +7,4 @@
 - glob_test.py was run in tests/ folder when I ran pytest, and therefore, when you ran pytest in root directory it failed. --- updated the test file to be compatible with pytest running from root directory.
 - Improve the way the program writes the stat file to make it easier to read.
 - Please note that stdout print out the number of redactions on the console to convey only the important information and safe space, and if you want to check the terms/sentences that are redacted, it is going to be in a stat file when you pass an argument to create a new stat file.  
+- directory in pytest path was for running pytest in tests/ folder. --- Editted the path to be compatible with running tests in root directory. 
