@@ -1,8 +1,8 @@
 # Dependencies
 import os     # for enumerating directories
 import nltk   # for NER
-nltk.download('wordnet')
-nltk.download('omw-1.4')
+nltk.download('wordnet', quiet=True)
+nltk.download('omw-1.4', quiet=True)
 import spacy  # for NER
 import re     # for regular expressions 
 import glob   # for choosing file that can be accepted
@@ -36,7 +36,7 @@ def main(input_ext, input_concepts, output_path, names_flag, dates_flag, genders
     globInput = input_ext
     for globType in globInput:
         #glob
-        for file in glob.glob(f'../*/{globType}'):
+        for file in glob.glob(f'./{globType}'):
         #for file in glob.glob(''):
             # opening a file into str object 'data'
             with open(file, "r") as f:
@@ -118,13 +118,16 @@ def main(input_ext, input_concepts, output_path, names_flag, dates_flag, genders
             if stats_type == 'stdout':
                 print(stdOut)
             elif stats_type == 'stderr':
-                sys.stderr.write(stdErr)
+                #sys.stderr.write(stdErr)
+                print(f"Standard Error for {fileName}:",file=sys.stderr)
+                print('\n')
             else:
-                statPath = (f"./{output_path}/{stats_type}")
+                statPath = (f"./{stats_type}")
                 os.makedirs(os.path.dirname(output_path), exist_ok=True) # to create the folder if not exist
                 with open (statPath, 'a', encoding="utf-8") as s:
+                    s.write("--------------------------------------------------------------------------------\n")
                     s.write(stdOut + "\n")
-                    s.write(f"\nRedacted Terms for {fileName}\n")
+                    s.write(f"\nRedacted Terms for {fileName}:-\n")
                     if names_flag:
                         s.write(f"Redacted names are: ")
                         for name in nameRedaction:

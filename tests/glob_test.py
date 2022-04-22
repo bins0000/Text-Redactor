@@ -5,9 +5,10 @@ def test_glob():
     for name in glob.glob('*/*.txt'):
         path = name
 
-    expectedOutput = "project1/common_names.txt"
+    expectedOutputInTests = "project1/common_names.txt"
+    expectedOutputInRoot = "docs/common_names.txt"
 
-    assert path == expectedOutput
+    assert path == expectedOutputInTests or path == expectedOutputInRoot
 
     
     
