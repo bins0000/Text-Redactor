@@ -36,7 +36,7 @@ def main(input_ext, input_concepts, output_path, names_flag, dates_flag, genders
     globInput = input_ext
     for globType in globInput:
         #glob
-        for file in glob.glob(f'*/emails/{globType}'):
+        for file in glob.glob(f'../*/{globType}'):
         #for file in glob.glob(''):
             # opening a file into str object 'data'
             with open(file, "r") as f:
@@ -393,23 +393,25 @@ def conceptRedactor(data, input_concepts):
     #lemmatize the inputs
     for term in input_concepts:
         concept_input.append(lemmatizer.lemmatize(term.lower()))
-
     # concept 2D list 
     concepts = [['kid', 'child', 'girl', 'boy', 'toy', 'playground', 'games', 'boardgames', 'baby'],
                 ['prison', 'jail', 'incarcerated', 'bar', 'con', 'lockup', 'prisoner', 'warden', 'crime'],
                 ['woman', 'lady', 'fierce', 'beauty', 'female', 'girl'],
                 ['business', 'rich', 'welthy', 'money', 'economy', 'bill', 'cash', 'payment'],
                 ['academic','school', 'university', 'student', 'teacher', 'textbook', 'computer', 'learn','campus'],
-                ['food','utensil','spoon','fork','breakfast','lunch','dinner','knife']
+                ['food','utensil','spoon','fork','breakfast','lunch','dinner','knife', 'cooking', 'meal', 'eat', 'drink']
                ]
-    
     # conceptRedactingWords collects the related words
     conceptRedactingWords = []
     for term in concept_input:
         for relatedWords in concepts:
             if term in relatedWords:
                 conceptRedactingWords += relatedWords
-
+            else:
+                if term not in conceptRedactingWords:
+                    conceptRedactingWords.append(term)
+    # remove duplicates
+    conceptRedactingWords = list(set(conceptRedactingWords))
     # conceptRedactingTerms collects the related words
     conceptRedactingTerms = []
     # using nltk synsets
@@ -425,6 +427,10 @@ def conceptRedactor(data, input_concepts):
         for word in concept_list:
             word = word.replace("_", " ")   # replace "_" with a space
             conceptRedactingTerms.append(word) 
+    
+    # checking the concept related words
+    #print('terms = ',conceptRedactingTerms)
+    #print('\n')
 
     # Opening the Emails using email parser
     emailData = Parser().parsestr(data)
