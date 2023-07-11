@@ -1,5 +1,8 @@
 # Author Nasri Binsaleh
-#### See COLLABORATORS.txt for related links
+
+Original repo name: cs5293sp22-project1
+
+#### A Python program using Natural Language Processing (NLP) to redact sensitive information from texts. The redactor model was trained to redact sensitive information including names, email addresses, particular concepts, addresses, gender, phone numbers, and dates.
 
 
 # Activating pipenv in the project directory
